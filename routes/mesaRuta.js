@@ -3,6 +3,7 @@ let mesaRoute = express.Router();
 let mesaCtrl = require('../controllers/mesaCtrl');
 
 mesaRoute.route('/').get(mesaCtrl.listar);
+mesaRoute.route("/crear").post(mesaCtrl.create);
 
 mesaRoute.route('/buscarPorMesaId/:id').get(mesaCtrl.buscarPorId);
 

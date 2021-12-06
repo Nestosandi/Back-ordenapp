@@ -15,14 +15,12 @@ module.exports = {
 		})
 	},
 
-	// // crear usuario
-	// create: (req, res) => {
-	// 	User.create(req.body, (err, user) => {
-	// 		if(err) return res.json({success: false, code: err.code})
-	// 		const token = signToken(user)
-	// 		res.json({success: true, message: "Usuario creado. Token añadido!", token})
-	// 	})
-	// },
+	// crear mesa
+	create: (req, res) => {
+		Mesa.create(req.body, (err, data) => {
+			res.json(data)
+		})
+	},
 
 	// // actualizar usuario
 	// update: (req, res) => {
