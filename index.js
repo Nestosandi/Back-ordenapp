@@ -22,6 +22,11 @@ if(NODE_ENV === "production") {
     });
 };
 
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
-})
+// app.listen(PORT, () => {
+//     console.log(`Servidor corriendo en http://localhost:${PORT}`);
+// })
+
+app.set("PORT", process.env.PORT || 3000);
+app.listen(app.get("PORT"), () => {
+  console.log(`Server started on port: ${app.get("PORT")}`);
+});
